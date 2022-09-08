@@ -3,12 +3,9 @@ document.getElementById('btn-search').addEventListener('click', () => {
     getUserProfile(userName)
 })
 
-document.getElementById('imput-search').addEventListener('keyup', (e) => {
+document.getElementById('input-search').addEventListener('keyup', (e) => {
     const userName = e.target.value
-    const key = e.which || e.keyCode
-    const isEnterKeyPressed = key === 13
-
-    if(isEnterKeyPressed) {
+    if(e.key === 'Enter') {
         getUserProfile(userName)
     }
 })
